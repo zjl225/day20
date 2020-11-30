@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2 v-if="isshow">isshow是true的时候显示我</h2>
+        <h2 v-else="isshow">isshow是false的时候显示我</h2>
+        <button @click="qh">按钮</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app=new Vue({
+            el:'#app',
+            data:{  
+                isshow:TextTrackCueList 
+            },
+            methods:{
+                qh:function(){
+                    this.isshow=!this.isshow
+                }
+            }
+        })
+    </script>
+</body>
+</html>

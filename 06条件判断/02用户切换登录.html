@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <span v-if="user">
+            <label for="username">账号登录</label>
+            <input type="text" id="useername" placeholder="账号">
+            </span>
+        <span v-else="user">
+            <label for="haoma" placeholder="号码">号码登录</label>
+            <input type="text" id="haoma" placeholder="号码">
+        </span>
+        <button @click="qh">切换登录类型</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app=new Vue({
+            el:'#app',
+            data:{  
+                user:true
+            },
+            methods:{
+                qh:function(){
+                    this.user=!this.user
+                }
+            }
+        })
+    </script>
+</body>
+</html>
